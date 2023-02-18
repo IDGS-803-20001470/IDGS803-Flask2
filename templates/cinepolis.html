@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-6">
+            <form class="form-horizontal" action="/cinepolisR" method="POST">
+                
+                <div class="control-group">
+                    <h3>Entradas</h3>
+                    <label class="control-label" for="txtNombre">Nombre: </label>
+                    <div class="controls">
+                        <input type="text" name="txtNombre" value="">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="txtCantC">Cant Compradores: </label>
+                    <div class="controls">
+                        <input type="text" name="txtCantC" value="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <p> TARJETA CINECON</p>
+                    <div class="control-group">
+                        <label class="control-label" for="txtCantC">SI</label>&nbsp; &nbsp;
+                        <input type="radio" id="si" name="opcion" value="si"></input>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="txtCantC1">NO</label>
+                        <input type="radio" id="no" name="opcion" value="no"></input>
+
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="txtCantB">Cant de Boletas: </label>
+                    <div class="controls">
+                        <input type="text" name="txtCantB" value="">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <h3>ACCIONES</h3>
+                        <button type="submit" class="btn btn-primary">PROCESAR
+                            <i class="icon-ok icon-white"></i>
+                        </button>
+                        <button class="btn btn-primary" type="button" onclick="location.href='/salida'">SALIR</a>
+                            <i class="icon-ok icon-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-4">
+            <img src="https://images.mediotiempo.com/Vymnf6EtQdv1Pq8--8ssZbIrHy0=/958x596/uploads/media/2020/03/24/cinepolis-cerrara-sus-puertas-hasta.jpg"
+                style="width:500px;height:280px; margin-top: 50px;" />
+        </div>
+
+
+    </div>
+
+</div>
+{% endblock %}

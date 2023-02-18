@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<form name="form" action="/cajasDinamicas" method="POST">
+    <div class="control-group">
+        <div class="controls col-5">
+            <label for="txtCant"> Número: </label>
+            <input id="txtCant" name="txtCant"></input>
+            <button type="submit" class="btn btn-primary">Mostrar
+                <i class="icon-ok icon-white"></i>
+            </button>
+        </div>
+
+    </div>
+</form>
+
+{% endblock %}

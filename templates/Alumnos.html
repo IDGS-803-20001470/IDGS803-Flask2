@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+{% from "_macros.html" import render_field %}
+<form name="form" action="" method="POST">
+    <div class="control-group">
+        <div class="controls">
+            {{ render_field(form.matricula) }} <!-- Es para que pinte  -->
+            {{ render_field(form.nombre) }}
+            {{ render_field(form.apaterno) }}
+            {{ render_field(form.email) }}
+            <button type="submit" class="btn btn-primary"> Enviar
+                <i class="icon-ok icon-white"></i>
+            </button>
+        </div>
+
+    </div>
+</form>
+{% endblock %}

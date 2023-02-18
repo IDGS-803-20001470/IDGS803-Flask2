@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+{% from "_macros.html" import render_input %}
+<form name="form" action="/resultadoCajas" method="POST">
+    <input name="txtCantidad" id="txtCantidad" value="{{cantidad}}"></input>
+    <div class="control-group">
+        <div class="controls">
+            {% for i in range(cantidad) %}
+            <label>Numero: {{i+1}}</label>
+            <input id="txt{{i+1}}" name="txt{{i+1}}"></input>
+            {% endfor %}
+            <button type="submit" class="btn btn-primary">Calcular
+                <i class="icon-ok icon-white"></i>
+            </button>
+           
+
+
+        </div>
+
+    </div>
+</form>
+{% endblock %}
