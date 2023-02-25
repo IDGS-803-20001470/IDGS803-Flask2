@@ -1,22 +1,50 @@
 {% extends "layout.html" %}
 {% block content %}
 {% from "_macros.html" import render_input %}
-<form name="form" action="/resultadoCajas" method="POST">
-    <input name="txtCantidad" id="txtCantidad" value="{{cantidad}}"></input>
-    <div class="control-group">
-        <div class="controls">
-            {% for i in range(cantidad) %}
-            <label>Numero: {{i+1}}</label>
-            <input id="txt{{i+1}}" name="txt{{i+1}}"></input>
-            {% endfor %}
-            <button type="submit" class="btn btn-primary">Calcular
-                <i class="icon-ok icon-white"></i>
-            </button>
-           
 
+<div class="container">
 
+    <div class="row">
+        <div class="col-6 " style="padding-top: 50px;">
+            <div class="row" style="padding-top: 20px;">
+               
+                    <div class="card" >
+                        <div class="card-header" style="text-align: center;">
+                            Inputs
+                        </div>
+                        <form name="form" action="/resultadoCajas" method="POST">
+                            <input name="txtCantidad" id="txtCantidad" value="{{cantidad}}" hidden></input>
+                            <div class="control-group">
+                                <div class="controls">
+                                    {% for i in range(cantidad) %}
+                                    <div style="padding-top: 2px;">
+                                    <label>Numero: {{i+1}}</label>
+                                    <input id="txt{{i+1}}" name="txt{{i+1}}"></input>
+                                </div>
+                                    {% endfor %}
+                                    <div style="padding-top: 10px;">
+                                    <button type="submit" class="btn btn-primary">Calcular
+                                        <i class="icon-ok icon-white"></i>
+                                    </button>
+                                </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+               
+            </div>
         </div>
-
+        <div class="col-6">
+            <h2>Cajas Dinamicas</h2>
+            <img src="https://img.freepik.com/fotos-premium/fondo-pantalla-datos-binarios-digitales-aleatorios-ilustracion-tecnologia-codigo-programacion-computadora-futurista-abstracto_44651-556.jpg?w=1060"
+                style="width:500px;height:280px; margin-top: 50px;" />
+        </div>
     </div>
-</form>
+
+
+
+
+</div>
+
+
 {% endblock %}

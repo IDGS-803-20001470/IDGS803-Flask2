@@ -1,5 +1,59 @@
 {% extends "layout.html" %}
 {% block content %}
-<h1>Cantidad {{cant}}</h1>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-6 sm-3" style="padding-top: 50px;">
+            <div class="card" style="width: max-content;">
+                <div class="card-header" style="text-align: center;">
+                    Repeticiones y %
+                </div>
+                <ul class="list-group list-group-flush">
+                    {%for i in range(longitud) %}
+                    <li class="list-group-item">El numero {{norep[i]}} se repite {{nums.count(norep[i])}} veces y es el
+                        {{(nums.count(norep[i])*100)/longNums }} %</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="row" style="padding-top: 20px; text-align: center;">
+                <div class="col-4">
+                    <div class="card" style="width: auto;">
+                        <div class="card-header" style="text-align: center;">
+                            Maximo
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{maxi}}</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="card" style="width: auto;">
+                        <div class="card-header" style="text-align: center;">
+                            Minimo
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{mini}}</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-6">
+            <h2>Cajas Dinamicas</h2>
+            <img src="https://img.freepik.com/fotos-premium/fondo-pantalla-datos-binarios-digitales-aleatorios-ilustracion-tecnologia-codigo-programacion-computadora-futurista-abstracto_44651-556.jpg?w=1060"
+                style="width:500px;height:280px; margin-top: 50px;" />
+        </div>
+    </div>
+
+
+
+
+</div>
+
 
 {% endblock %}

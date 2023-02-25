@@ -1,16 +1,33 @@
 {% extends "layout.html" %}
 {% block content %}
-<form name="form" action="/cajasDinamicas" method="POST">
-    <div class="control-group">
-        <div class="controls col-5">
-            <label for="txtCant"> Número: </label>
-            <input id="txtCant" name="txtCant"></input>
-            <button type="submit" class="btn btn-primary">Mostrar
-                <i class="icon-ok icon-white"></i>
-            </button>
-        </div>
+<div class="container">
 
+    <div class="row">
+        <div class="col-6 " style="padding-top: 50px;">
+            <form name="form" action="/cajasDinamicas" method="POST">
+                <div class="control-group">
+                    
+                        <label for="txtCant"> Ingrese la cantidad de inputs a generar: </label>
+                        <input id="txtCant" name="txtCant"></input>
+                        <div style="padding-top: 10px; text-align: center;">
+                        <button type="submit" class="btn btn-primary">Mostrar
+                            <i class="icon-ok icon-white"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <div class="col-6">
+            <h2>Cajas Dinamicas</h2>
+            <img src="https://img.freepik.com/fotos-premium/fondo-pantalla-datos-binarios-digitales-aleatorios-ilustracion-tecnologia-codigo-programacion-computadora-futurista-abstracto_44651-556.jpg?w=1060"
+                style="width:500px;height:280px; margin-top: 50px;" />
+        </div>
     </div>
-</form>
+
+
+
+
+</div>
 
 {% endblock %}
